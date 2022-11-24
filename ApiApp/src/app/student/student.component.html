@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row" >
+        <div class="col col-md-4 col-xxl-3 col-lg-3 d-flex justify-content-center" *ngFor="let i of studentData">
+            <div class="card my-3" style="width: 20rem;">
+                <img [src]="i.avatar" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Name : {{i.name}}</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">email : {{i.email}}</li>
+                    <li class="list-group-item">pass : {{i.password}}</li>
+                  </ul>
+                
+                  <p class="card-text">Address : {{i.address}}</p>
+                  <hr/>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
