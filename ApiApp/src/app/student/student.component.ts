@@ -8,10 +8,22 @@ import { Student } from '../student';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent {
+  
+  // Created a new Empty Student Array
   studentData:Student[]=[];
+
+  // Added Dependancy To Contuctor
+
   constructor(private __api:ApiStudentService){}
+  
+  
+  /* 
+  convert =>  Observable to an actual obj or array using subscribe 
+  then storing data into variable  
+  */
   ngOnInit()
   {
+    // Calling get all method
     this.__api.getAllStudent().subscribe((res:any)=>{
 
       console.log(res);
